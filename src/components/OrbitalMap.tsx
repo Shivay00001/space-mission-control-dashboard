@@ -17,14 +17,14 @@ export function OrbitalMap() {
         // Background grid
         const grid = svg.append('g').attr('class', 'grid')
         for (let x = 0; x < width; x += 50) {
-            grid.append('line').attr('x1', x).attr('y1', 0).attr('x2', x).attr('y2', height).attr('stroke', '#30363d').attr('stroke-width', 0.5)
+            grid.append('line').attr('x1', x).attr('y1', 0).attr('x2', x).attr('y2', height).attr('stroke', '#30363d').attr('stroke-width', '0.5')
         }
         for (let y = 0; y < height; y += 50) {
-            grid.append('line').attr('x1', 0).attr('y1', y).attr('x2', width).attr('y2', y).attr('stroke', '#30363d').attr('stroke-width', 0.5)
+            grid.append('line').attr('x1', 0).attr('y1', y).attr('x2', width).attr('y2', y).attr('stroke', '#30363d').attr('stroke-width', '0.5')
         }
 
         // Earth
-        const earth = svg.append('circle')
+        svg.append('circle')
             .attr('cx', width / 2)
             .attr('cy', height / 2)
             .attr('r', 40)
@@ -34,7 +34,7 @@ export function OrbitalMap() {
 
         // Trajectory
         const orbitRadius = 150
-        const orbitPath = svg.append('circle')
+        svg.append('circle')
             .attr('cx', width / 2)
             .attr('cy', height / 2)
             .attr('r', orbitRadius)
