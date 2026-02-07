@@ -1,6 +1,6 @@
 
-import { useState, useEffect } from 'react'
-import { Activity, Radio, Database, AlertCircle } from 'lucide-react'
+import { useState } from 'react'
+import { Activity, Radio, Database } from 'lucide-react'
 import './App.css'
 import { OrbitalMap } from './components/OrbitalMap'
 import { SystemStatus } from './components/SystemStatus'
