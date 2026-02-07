@@ -31,10 +31,10 @@ function App() {
                 <section className="logs-panel">
                     <h2><Database className="icon" /> Data Links</h2>
                     <div className="log-window">
-                        <p>> Initializing uplink...</p>
-                        <p>> Connection established (LAT: 23ms)</p>
-                        <p>> Downloading packet #49281...</p>
-                        <p className="success">> Sync complete.</p>
+                        <p>&gt; Initializing uplink...</p>
+                        <p>&gt; Connection established (LAT: 23ms)</p>
+                        <p>&gt; Downloading packet #49281...</p>
+                        <p className="success">&gt; Sync complete.</p>
                     </div>
                 </section>
             </main>
