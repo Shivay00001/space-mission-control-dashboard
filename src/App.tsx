@@ -20,7 +20,7 @@ function App() {
             <main className="dashboard-grid">
                 <section className="telemetry-panel">
                     <h2><Radio className="icon" /> Live Telemetry</h2>
-                    <SystemStatus onStatusChange={setStatus} />
+                    <SystemStatus onStatusChange={(s) => setStatus(s)} />
                 </section>
 
                 <section className="orbital-view">
