@@ -1,0 +1,45 @@
+
+import { useState, useEffect } from 'react'
+import { Activity, Radio, Database, AlertCircle } from 'lucide-react'
+import './App.css'
+import { OrbitalMap } from './components/OrbitalMap'
+import { SystemStatus } from './components/SystemStatus'
+
+function App() {
+    const [status, setStatus] = useState('NOMINAL')
+
+    return (
+        <div className="dashboard-container">
+            <header className="dashboard-header">
+                <h1>MISSION CONTROL</h1>
+                <div className={`status-badge ${status.toLowerCase()}`}>
+                    SYSTEM STATUS: {status}
+                </div>
+            </header>
+
+            <main className="dashboard-grid">
+                <section className="telemetry-panel">
+                    <h2><Radio className="icon" /> Live Telemetry</h2>
+                    <SystemStatus onStatusChange={setStatus} />
+                </section>
+
+                <section className="orbital-view">
+                    <h2><Activity className="icon" /> Orbital Trajectory</h2>
+                    <OrbitalMap />
+                </section>
+
+                <section className="logs-panel">
+                    <h2><Database className="icon" /> Data Links</h2>
+                    <div className="log-window">
+                        <p>> Initializing uplink...</p>
+                        <p>> Connection established (LAT: 23ms)</p>
+                        <p>> Downloading packet #49281...</p>
+                        <p className="success">> Sync complete.</p>
+                    </div>
+                </section>
+            </main>
+        </div>
+    )
+}
+
+export default App
