@@ -1,0 +1,76 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    background: #0f111a;
+    color: #e6edf3;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+}
+
+.status-badge {
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.status-badge.nominal {
+    background: #2ea043;
+    color: white;
+    box-shadow: 0 0 10px rgba(46, 160, 67, 0.4);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr 300px;
+    grid-template-rows: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    height: 100%;
+    overflow: hidden;
+}
+
+section {
+    background: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-top: 0;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 0.5rem;
+    color: #58a6ff;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+}
+
+.log-window {
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #8b949e;
+}
+
+.log-window .success {
+    color: #2ea043;
+}
