@@ -49,3 +49,8 @@ npm run dev
 ## 📄 License
 
 MIT License
+
+
+## Prerequisites
+- Required environment and dependencies
+
